@@ -9,6 +9,7 @@
   --line: #E6E2D9;
   --acc: #1F5C45;
   --acc-soft: #E3EEE7;
+  --on-acc: #FFFFFF;
   --shadow: 0 10px 30px rgba(25, 25, 21, .12);
 }
 @media (prefers-color-scheme: dark) {
@@ -21,6 +22,7 @@
     --line: #2F2E29;
     --acc: #7CC79F;
     --acc-soft: #1E3227;
+    --on-acc: #0F1F17;
     --shadow: 0 10px 30px rgba(0, 0, 0, .5);
   }
 }
@@ -59,9 +61,13 @@ main.home ~ footer, .nav:has(+ main.home) { max-width: 960px; }
 .hero { display: grid; grid-template-columns: 1fr 300px; gap: 56px; align-items: center; padding: 32px 0 24px; }
 .hero .icon { width: 96px; height: 96px; border-radius: 22px; box-shadow: var(--shadow); margin-bottom: 24px; }
 .lead { font-size: 20px; max-width: 30em; margin: 0; }
-.status { display: inline-flex; align-items: center; gap: 8px; margin: 28px 0 0; font-weight: 600; color: var(--acc); }
-.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--acc); }
-.facts { display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 12px 0 0; padding: 0; list-style: none; font-size: 15px; }
+/* The one filled element on the page until the App Store badge replaces it. Not a link, so no hover. */
+.status { display: inline-flex; align-items: center; gap: 12px; margin: 28px 0 0; padding: 14px 22px 14px 18px; border-radius: 14px; background: var(--acc); color: var(--on-acc); font-size: 17px; font-weight: 600; box-shadow: 0 6px 18px rgba(31, 92, 69, .25); }
+.pulse { position: relative; width: 10px; height: 10px; border-radius: 50%; background: currentColor; flex: none; }
+.pulse::after { content: ""; position: absolute; inset: -5px; border-radius: 50%; border: 2px solid currentColor; opacity: 0; animation: pulse 2.4s ease-out infinite; }
+@keyframes pulse { 0% { transform: scale(.5); opacity: .7; } 100% { transform: scale(1.4); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .pulse::after { animation: none; } }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 16px 0 0; padding: 0; list-style: none; font-size: 15px; }
 .facts li { display: flex; align-items: center; gap: 6px; }
 .facts li::before { content: "✓"; color: var(--acc); font-weight: 700; }
 
