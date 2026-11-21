@@ -36,7 +36,7 @@ body {
   font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 main, header, footer { max-width: 760px; margin: 0 auto; padding: 0 20px; }
-main.home { max-width: 960px; }
+main.home { max-width: 1040px; }
 a { color: var(--acc); text-underline-offset: 3px; }
 a:focus-visible { outline: 2px solid var(--acc); outline-offset: 3px; border-radius: 4px; }
 h1, h2, h3 { font-family: ui-serif, "New York", Georgia, serif; font-weight: 600; line-height: 1.2; color: var(--ink); text-wrap: balance; }
@@ -47,7 +47,7 @@ p, li { color: var(--ink2); }
 .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--mut); margin: 0 0 8px; }
 
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 20px; padding-bottom: 20px; }
-main.home ~ footer, .nav:has(+ main.home) { max-width: 960px; }
+main.home ~ footer, .nav:has(+ main.home) { max-width: 1040px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 600; }
 .brand img { width: 32px; height: 32px; border-radius: 8px; }
 .nav nav { display: flex; gap: 4px; font-size: 15px; }
@@ -58,21 +58,20 @@ main.home ~ footer, .nav:has(+ main.home) { max-width: 960px; }
 .phone { margin: 0; }
 .phone img { display: block; width: 100%; height: auto; border-radius: 9% / 4.2%; border: 1px solid var(--line); box-shadow: var(--shadow); }
 
-.hero { display: grid; grid-template-columns: 1fr 300px; gap: 56px; align-items: center; padding: 32px 0 24px; }
+.hero { display: grid; grid-template-columns: 1fr 360px; gap: 64px; align-items: center; padding: 32px 0 24px; }
 .hero .icon { width: 96px; height: 96px; border-radius: 22px; box-shadow: var(--shadow); margin-bottom: 24px; }
 .lead { font-size: 20px; max-width: 30em; margin: 0; }
-/* The one filled element on the page until the App Store badge replaces it. Not a link, so no hover. */
-.status { display: inline-flex; align-items: center; gap: 12px; margin: 28px 0 0; padding: 14px 22px 14px 18px; border-radius: 14px; background: var(--acc); color: var(--on-acc); font-size: 17px; font-weight: 600; box-shadow: 0 6px 18px rgba(31, 92, 69, .25); }
-.pulse { position: relative; width: 10px; height: 10px; border-radius: 50%; background: currentColor; flex: none; }
-.pulse::after { content: ""; position: absolute; inset: -5px; border-radius: 50%; border: 2px solid currentColor; opacity: 0; animation: pulse 2.4s ease-out infinite; }
-@keyframes pulse { 0% { transform: scale(.5); opacity: .7; } 100% { transform: scale(1.4); opacity: 0; } }
-@media (prefers-reduced-motion: reduce) { .pulse::after { animation: none; } }
+/* Launch notice: tinted and left-aligned with two lines of text, so it reads as information rather than a button. */
+.launch { display: inline-flex; align-items: center; gap: 14px; margin: 28px 0 0; padding: 12px 22px 12px 12px; border-radius: 16px; background: var(--acc-soft); }
+.launch-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--acc); color: var(--on-acc); flex: none; }
+.launch strong { display: block; color: var(--ink); font-size: 17px; line-height: 1.3; }
+.launch strong + span { display: block; color: var(--ink2); font-size: 15px; line-height: 1.35; }
 .facts { display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 16px 0 0; padding: 0; list-style: none; font-size: 15px; }
 .facts li { display: flex; align-items: center; gap: 6px; }
 .facts li::before { content: "✓"; color: var(--acc); font-weight: 700; }
 
-.row { display: grid; grid-template-columns: 260px 1fr; gap: 56px; align-items: center; margin-top: 88px; }
-.row:nth-of-type(odd) { grid-template-columns: 1fr 260px; }
+.row { display: grid; grid-template-columns: 340px 1fr; gap: 72px; align-items: center; margin-top: 88px; }
+.row:nth-of-type(odd) { grid-template-columns: 1fr 340px; }
 .row:nth-of-type(odd) .phone { order: 2; }
 .row p:last-child { margin-bottom: 0; }
 
