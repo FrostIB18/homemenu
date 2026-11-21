@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home Menu – Family Planner</title>
-  <meta name="description" content="Plan the family's meals for the week, get the shopping list, and share both with the family through iCloud.">
+  <meta name="description" content="Plan the family's meals for the week, get one shopping list, and share both through iCloud. Free, for iPhone and Apple Watch.">
   <link rel="icon" href="icon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="apple-itunes-app" content="app-id=6836330784">
@@ -25,40 +25,63 @@
     <nav><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
   </header>
 
-  <main>
+  <main class="home">
     <section class="hero">
-      <img class="icon" src="icon.png" alt="Home Menu app icon">
-      <p class="eyebrow">For iPhone and Apple Watch</p>
-      <h1>The family's menu for the week.</h1>
-      <p class="lead">Plan breakfast, lunch, snack and dinner for every day, get one shopping list for the week, and share both with your family through iCloud. Everyone sees and edits the same menu.</p>
-      <span class="badge">Coming soon to the App Store</span>
-      <ul class="slots" aria-label="Meals of the day">
-        <li style="--c: var(--breakfast)">Breakfast</li>
-        <li style="--c: var(--lunch)">Lunch</li>
-        <li style="--c: var(--snack)">Snack</li>
-        <li style="--c: var(--dinner)">Dinner</li>
-      </ul>
+      <div class="hero-text">
+        <img class="icon" src="icon.png" width="96" height="96" alt="Home Menu app icon">
+        <p class="eyebrow">For iPhone and Apple Watch</p>
+        <h1>The family's menu for the week.</h1>
+        <p class="lead">Plan every breakfast, lunch, snack and dinner, get one shopping list for the week, and share both with everyone at home.</p>
+        <p class="status">Coming soon to the App Store</p>
+        <ul class="facts" aria-label="At a glance">
+          <li>Free</li>
+          <li>No ads</li>
+          <li>No accounts</li>
+        </ul>
+      </div>
+      <figure class="phone hero-phone">
+        <img src="images/iphone-today.jpg" width="640" height="1390" alt="The Today screen: the snack that's due now, the rest of today and tomorrow's meals">
+      </figure>
     </section>
 
-    <div class="shots" role="list" aria-label="Screenshots">
-      <figure role="listitem"><img src="images/iphone-today.jpg" width="640" height="1390" alt="Today: the snack that's due now, the rest of today and tomorrow's meals"><figcaption>Today</figcaption></figure>
-      <figure role="listitem"><img src="images/iphone-week.jpg" width="640" height="1390" alt="Week: each day's meals from Monday to Sunday" loading="lazy"><figcaption>Week</figcaption></figure>
-      <figure role="listitem"><img src="images/iphone-shopping.jpg" width="640" height="1390" alt="Shopping: the week's ingredients added up, with ticks" loading="lazy"><figcaption>Shopping</figcaption></figure>
-    </div>
-
-    <ul class="features">
-      <li><h3>Today</h3><p>The meal that matters now, switching at each meal's time. After dinner it shows tomorrow's breakfast.</p></li>
-      <li><h3>Week</h3><p>Monday to Sunday at a glance. Fill the gaps from your own meals, plan leftovers or eating out, or skip a meal.</p></li>
-      <li><h3>Shopping</h3><p>Ingredients for the week added up by name and unit, with your extras. Pantry staples stay off the list.</p></li>
-      <li><h3>Meals</h3><p>Your family's recipes with ingredients and the times of day they suit. Starts with a few to try.</p></li>
-      <li><h3>Family</h3><p>Invite with a link. The menu lives in your own iCloud; there are no accounts to create and no servers in between.</p></li>
-      <li><h3>Your day, your way</h3><p>Set your family's own meals of the day and their times, and see what's next in the Home Screen widget.</p></li>
-    </ul>
-
-    <section class="watch">
+    <section class="row">
+      <figure class="phone">
+        <img src="images/iphone-week.jpg" width="640" height="1390" alt="The Week screen: each day's meals from Monday to Sunday" loading="lazy">
+      </figure>
       <div>
-        <h2>On your wrist</h2>
-        <p>The Apple Watch app shows the meal that's due now, the rest of today and tomorrow. In the shop, tick things off the list without taking out your phone; through your iPhone, the whole family sees what's been bought.</p>
+        <p class="eyebrow">Week</p>
+        <h2>The whole week at a glance.</h2>
+        <p>Monday to Sunday on one screen. Fill the gaps from your own meals, plan leftovers or a night out, or skip a meal. Auto-fill and copying last week do the rest.</p>
+      </div>
+    </section>
+
+    <section class="row">
+      <figure class="phone">
+        <img src="images/iphone-shopping.jpg" width="640" height="1390" alt="The Shopping screen: the week's ingredients added up, each with a tick" loading="lazy">
+      </figure>
+      <div>
+        <p class="eyebrow">Shopping</p>
+        <h2>One list, already added up.</h2>
+        <p>Every ingredient for the week, totalled by name and unit, with extras like coffee or soap. Pantry staples such as salt stay off the list until you need them. Tick things off in the shop and everyone sees it.</p>
+      </div>
+    </section>
+
+    <section class="row">
+      <figure class="phone">
+        <img src="images/iphone-meals.jpg" width="640" height="1390" alt="The Meals screen: the family's meals, filtered by time of day" loading="lazy">
+      </figure>
+      <div>
+        <p class="eyebrow">Meals</p>
+        <h2>Your family's own recipes.</h2>
+        <p>Keep the meals you actually cook, with their ingredients and the times of day they suit. A few starter meals help you begin.</p>
+      </div>
+    </section>
+
+    <section class="panel watch">
+      <div>
+        <p class="eyebrow">Apple Watch</p>
+        <h2>The list on your wrist.</h2>
+        <p>See the meal that's due now, the rest of today and tomorrow. In the shop, tick things off without taking out your phone. Your iPhone passes the ticks on, so the whole family sees what's been bought.</p>
       </div>
       <div class="watch-shots">
         <img src="images/watch-today.png" width="416" height="496" alt="Apple Watch: today's breakfast and lunch" loading="lazy">
@@ -66,8 +89,18 @@
       </div>
     </section>
 
-    <h2>In your language</h2>
-    <p>English, Russian, Spanish, German and Portuguese (Brazil). Phones in different languages share one menu.</p>
+    <section class="panel">
+      <p class="eyebrow">Family</p>
+      <h2>Shared with your family. Private from everyone else.</h2>
+      <p>Invite with a link and everyone sees and edits the same menu, even edits made offline. The menu lives on your iPhone and in your own iCloud. There are no accounts to create, no servers in between and no data collected. <a href="privacy.html">Read the privacy policy</a></p>
+    </section>
+
+    <ul class="features">
+      <li><h3>Your meals of the day</h3><p>Skip lunch, add a second snack, set the times. Today switches to the next meal on time.</p></li>
+      <li><h3>Home Screen widget</h3><p>The meal that matters now, and what's next, without opening the app.</p></li>
+      <li><h3>Easy to read</h3><p>Every screen works with the largest text sizes and in dark mode.</p></li>
+      <li><h3>In your language</h3><p>English, German, Spanish, Portuguese (Brazil) and Russian. Phones in different languages share one menu.</p></li>
+    </ul>
   </main>
 
   <footer>
